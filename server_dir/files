@@ -1,0 +1,4 @@
+#! /bin/bash
+for n in {1..25}; do     
+base64 /dev/urandom | head -c 1000000 > file$( printf %03d "$n" ).txt   
+done
